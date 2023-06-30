@@ -5,14 +5,10 @@ const run = async () => {
     data: [
       {
         id: genId(),
-        slug: 'ultimate-node-stack',
-        title: 'Ultimate Node Stack',
         publishedAt: new Date(),
       },
       {
         id: genId(),
-        slug: 'draft-post',
-        title: 'Draft Post',
       },
     ],
   });
