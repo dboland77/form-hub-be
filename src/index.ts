@@ -7,8 +7,8 @@ app.use(morgan('dev'));
 
 app.get('/', async (req, res) => {
   // debugger;
-  const posts = await db.post.findMany({
-    where: { publishedAt: { not: null } },
+  const posts = await db.submission.findMany({
+    where: { submittedAt: { not: null } },
   });
 
   res.json(posts);

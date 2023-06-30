@@ -11,15 +11,14 @@ datasource db {
 }
 
 
-model Post {
+model Submission {
   id String @id
-  slug String @unique
-  title String 
   content String?
-  publishedAt DateTime? 
+  data Json
+  submittedAt DateTime? 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-@@map(name: "posts")
-@@index([publishedAt])
+@@map(name: "submissions")
+@@index([submittedAt])
 }

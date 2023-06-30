@@ -5,9 +5,12 @@ export async function up(knex: Knex): Promise<void> {
     table.specificType('id', 'CHAR(16)').primary();
     table.text('content').nullable();
     table.timestamp('submittedAt').notNullable();
+    table.jsonb('data').notNullable();
+    table.timestamp('createdAt').notNullable().defaultTo(knex.fn.now());
+    table.timestamp('updatedAt').notNullable();
   });
 }
 
 export async function down(knex: Knex): Promise<void> {
-  await knex.schema.dropTable('posts');
+  await knex.schema.dropTable('submissions');
 }

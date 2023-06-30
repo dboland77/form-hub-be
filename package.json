@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
+    "build:prisma": "prisma generate && yarn rebuild:be",
     "start": "node dist/index.js",
     "start:docker": "yarn build && node --inspect=0.0.0.0 dist/index.js",
     "db:console": "docker compose run postgres psql -h postgres -U postgres -d webapp_dev",
@@ -25,7 +26,7 @@
     "express": "^4.18.2",
     "knex": "^2.4.2",
     "morgan": "^1.10.0",
-    "nanoid": "^3.0.0",
+    "nanoid": "^3.3.4",
     "pg": "^8.11.1",
     "typescript": "^5.1.6"
   },

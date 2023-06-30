@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
-import { nanoid } from 'nanoid';
+
+const { nanoid } = require('nanoid');
 
 const db = new PrismaClient({ log: ['query', 'error', 'warn', 'info'] });
 

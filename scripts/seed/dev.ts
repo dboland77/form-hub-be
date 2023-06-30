@@ -1,14 +1,12 @@
 import db, { genId } from '../../src/modules/db';
 
 const run = async () => {
-  await db.post.createMany({
+  await db.submission.createMany({
     data: [
       {
         id: genId(),
-        publishedAt: new Date(),
-      },
-      {
-        id: genId(),
+        submittedAt: new Date(),
+        data: "Hello from form submission"
       },
     ],
   });

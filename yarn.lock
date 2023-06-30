@@ -1624,7 +1624,7 @@ __metadata:
     express: "npm:^4.18.2"
     knex: "npm:^2.4.2"
     morgan: "npm:^1.10.0"
-    nanoid: "npm:^3.0.0"
+    nanoid: "npm:^3.3.4"
     pg: "npm:^8.11.1"
     prettier: "npm:^2.8.8"
     prisma: "npm:4.16.1"
@@ -2342,12 +2342,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.0.0":
-  version: 3.3.6
-  resolution: "nanoid@npm:3.3.6"
+"nanoid@npm:^3.3.4":
+  version: 3.3.4
+  resolution: "nanoid@npm:3.3.4"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 606b355960d0fcbe3d27924c4c52ef7d47d3b57208808ece73279420d91469b01ec1dce10fae512b6d4a8c5a5432b352b228336a8b2202a6ea68e67fa348e2ee
+  checksum: a0747d5c6021828fe8d38334e5afb05d3268d7d4b06024058ec894ccc47070e4e81d268a6b75488d2ff3485fa79a75c251d4b7c6f31051bb54bb662b6fd2a27d
   languageName: node
   linkType: hard
 
