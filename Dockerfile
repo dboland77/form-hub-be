@@ -1,12 +1,10 @@
-FROM node:20
-
-RUN npm i -g pnpm
+FROM node:20.2.0-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json yarn.lock ./
 
-RUN pnpm install --frozen-lockfile
+RUN yarn install 
 
 COPY prisma/schema.prisma ./prisma/
 RUN npx prisma generate
@@ -16,5 +14,5 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["pnpm", "start"]
+CMD ["yarn", "start"]
 
